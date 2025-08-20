@@ -1,1 +1,3 @@
-request 
+request 25.2
+numpy 25.2
+pandas 25.2

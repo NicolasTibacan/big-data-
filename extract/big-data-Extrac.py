@@ -1,8 +1,12 @@
 import requests
-url="https://ipinfo.io/190.60.194.114/json"
-try:
-    response=requests.get(url)
-    data=response.json()
-    print(data)
-except:
-    print("pailas manito")
+import pandas as pd
+import numpy as np
+
+class bigdataextractor:
+    def init (self, csv_path):
+        self.csv=csv_path
+        self.data = ""
+    def queries(self):
+        self.data=pd.read.csv(self.csv)
+    def response(self):
+        return self.data.head(5)
